@@ -1,0 +1,1 @@
+Some PHPUnit tests to quickly verify the PHPUnit installation

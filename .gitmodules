@@ -1,0 +1,3 @@
+[submodule "phpBB"]
+	path = phpBB
+	url = git://github.com/phpbb/phpbb3.git
