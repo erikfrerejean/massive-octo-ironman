@@ -18,12 +18,13 @@
 
 	<!-- Update to correctly match the database to be tested agains -->
 	<php>
-		<server name="PHPBB_TEST_DBMS" value="mysqli" />
-		<server name="PHPBB_TEST_DBHOST" value="127.0.0.1" />
-		<server name="PHPBB_TEST_DBPORT" value="3306" />
-		<server name="PHPBB_TEST_DBNAME" value="test" />
-		<server name="PHPBB_TEST_DBUSER" value="root" />
+		<server name="PHPBB_TEST_DBMS" value="firebird" />
+		<server name="PHPBB_TEST_DBHOST" value="/tmp/firebird.fdb" />
+		<server name="PHPBB_TEST_DBPORT" value="" />
+		<server name="PHPBB_TEST_DBNAME" value="SYSDBA" />
+		<server name="PHPBB_TEST_DBUSER" value="masterkey" />
 		<server name="PHPBB_TEST_DBPASSWD" value="" />
 		<server name="PHPBB_TEST_TABLE_PREFIX" value="phpbb_" />
 	</php>
 </phpunit>
+
