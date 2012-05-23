@@ -9,7 +9,7 @@ env:
 before_install:
   - sudo service firebird2.5-super start
 
-before-script:
+before_script:
   - pyrus install phpunit/DbUnit
   - phpenv rehash
   - git submodule update --init
