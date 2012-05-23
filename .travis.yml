@@ -1,6 +1,5 @@
 language: php
 php:
-  - 5.2
   - 5.3
   - 5.4
 
@@ -8,12 +7,10 @@ env:
   - DB=firebird
 
 before-script:
-  - sudo service firebird2.5-super start
-  - sh -c "if [ '$TRAVIS_PHP_VERSION' = '5.2' ]; then pear install --force phpunit/DbUnit; fi"
-  - sh -c "if [ '$TRAVIS_PHP_VERSION' = '5.3' ]; then pyrus install --force phpunit/DbUnit; fi"
-  - sh -c "if [ '$TRAVIS_PHP_VERSION' = '5.4' ]; then pyrus install --force phpunit/DbUnit; fi"
+  - pyrus install phpunit/DbUnit
   - phpenv rehash
   - git submodule update --init
+  - sudo service firebird2.5-super start
 
 script:
   - phpunit --verbose 
