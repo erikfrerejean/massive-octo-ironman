@@ -1,8 +1,8 @@
 <?php
 
 define('IN_PHPBB', true);
-define('PHPBB_TESTS', __DIR__ . '/phpBB/tests/');
-$phpbb_root_path = __DIR__ . '/phpBB/phpBB/';
+define('PHPBB_TESTS', dirname(__FILE__) . '/phpBB/tests/');
+$phpbb_root_path = dirname(__FILE__) . '/phpBB/phpBB/';
 $phpEx = 'php';
 
 require_once PHPBB_TESTS . 'test_framework/phpbb_test_case_helpers.php';
