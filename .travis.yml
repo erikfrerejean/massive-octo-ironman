@@ -10,6 +10,8 @@ before-script:
   - pyrus install phpunit/DbUnit
   - phpenv rehash
   - git submodule update --init
+
+install:
   - sudo service firebird2.5-super start
 
 script:
