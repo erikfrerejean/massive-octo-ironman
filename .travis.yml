@@ -13,6 +13,7 @@ before_script:
   - pyrus install phpunit/DbUnit
   - phpenv rehash
   - git submodule update --init
+  - isql -c "DBF=/tmp/firebird.fdb;UID=SYSDBA;PWD=masterkey;"
 
 script:
   - phpunit --verbose 
