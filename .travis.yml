@@ -13,9 +13,8 @@ before_script:
   - pyrus install phpunit/DbUnit
   - phpenv rehash
   - git submodule update --init
-  - isql-fb -u SYSDBA -p masterkey << EOF
-CREATE DATABASE "localhost:/tmp/firebird.fdb" PAGE_SIZE = 4096;
-EOF
+  - echo 'CREATE DATABASE "localhost:/tmp/firebird.fdb" PAGE_SIZE = 4096;' > /tmp/create.sql
+  - isql-fb -u SYSDBA -p masterkey -i /tmp/create.sql -q
 
 script:
   - phpunit --verbose 
