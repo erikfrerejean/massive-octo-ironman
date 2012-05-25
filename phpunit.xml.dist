@@ -19,7 +19,7 @@
 	<!-- Update to correctly match the database to be tested agains -->
 	<php>
 		<server name="PHPBB_TEST_DBMS" value="firebird" />
-		<server name="PHPBB_TEST_DBNAME" value="localhost:/tmp/firebird.fdb" />
+		<server name="PHPBB_TEST_DBNAME" value="/tmp/firebird.fdb" />
 		<server name="PHPBB_TEST_DBPORT" value="" />
 		<server name="PHPBB_TEST_DBHOST" value="localhost" />
 		<server name="PHPBB_TEST_DBUSER" value="SYSDBA" />
