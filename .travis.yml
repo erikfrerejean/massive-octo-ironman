@@ -11,6 +11,7 @@ before_install:
 before_script:
   - git submodule update --init
   - pyrus install phpunit/DbUnit
+  - ls -l ./DBUnitNoxwizard/PHPUnit/Extensions/Database/DB/MetaData/
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions
