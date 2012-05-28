@@ -1,3 +1,6 @@
 [submodule "phpBBNoxwizard"]
 	path = phpBBNoxwizard
 	url = git://github.com/Noxwizard/phpbb3.git
+[submodule "DBUnitNoxwizard"]
+	path = DBUnitNoxwizard
+	url = git://github.com/Noxwizard/dbunit.git
