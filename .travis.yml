@@ -16,7 +16,7 @@ before_script:
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions/Database
-  - cp -r ./DBUnitNoxwizard/PHPUnit/Extensions/Database /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions/Database
+  - cp -rf ./DBUnitNoxwizard/PHPUnit/Extensions/Database/* /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions/Database
   - phpenv rehash
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions/Database/DB/
   - ls -l /home/vagrant/.phpenv/versions/5.4.3/share/pyrus/.pear/php/PHPUnit/Extensions/Database/DB/MetaData/
