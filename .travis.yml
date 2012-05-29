@@ -23,7 +23,7 @@ before_script:
   - phpenv rehash
   - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php/PHPUnit/Extensions/Database/DB/
   - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php/PHPUnit/Extensions/Database/DB/MetaData/
-  - echo 'CREATE DATABASE "localhost:/tmp/firebird.fdb" PAGE_SIZE = 16384;' > /tmp/create.sql 
+  - echo 'CREATE DATABASE "LOCALHOST:/tmp/firebird.fdb" PAGE_SIZE = 16384;' > /tmp/create.sql 
   - isql-fb -u SYSDBA -p masterkey -i /tmp/create.sql -q
   - ls -l /tmp/
 
