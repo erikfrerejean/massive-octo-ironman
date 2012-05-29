@@ -11,20 +11,21 @@ before_install:
 before_script:
   - git submodule update --init
   - pyrus install phpunit/DbUnit
-  - export PYRUS_PHP_DIR=`pyrus get php_dir`
+  - export PYRUS_PHP_DIR=`pear config-get php_dir`
+  - echo $PYRUS_PHP_DIR
+  - pyrus get php_dir
   - ls -l ./DBUnitNoxwizard/PHPUnit/Extensions/Database/DB/MetaData/
-  - ls -l $PYRUS_PHP_DIR
-  - ls -l $PYRUS_PHP_DIR/PHPUnit
-  - ls -l $PYRUS_PHP_DIR/PHPUnit/Extensions
-  - ls -l $PYRUS_PHP_DIR/PHPUnit/Extensions/Database
-  - cp -rf ./DBUnitNoxwizard/PHPUnit/Extensions/Database/* $PYRUS_PHP_DIR/PHPUnit/Extensions/Database
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php/
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit/Extensions
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit/Extensions/Database
+  - cp -rf ./DBUnitNoxwizard/PHPUnit/Extensions/Database/* $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit/Extensions/Database
   - phpenv rehash
-  - ls -l $PYRUS_PHP_DIR/PHPUnit/Extensions/Database/DB/
-  - ls -l $PYRUS_PHP_DIR/PHPUnit/Extensions/Database/DB/MetaData/
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit/Extensions/Database/DB/
+  - ls -l $PYRUS_PHP_DIR/../share/pyrus/.pear/php//PHPUnit/Extensions/Database/DB/MetaData/
   - echo 'CREATE DATABASE "localhost:/tmp/firebird.fdb" PAGE_SIZE = 16384;' > /tmp/create.sql 
   - isql-fb -u SYSDBA -p masterkey -i /tmp/create.sql -q
   - ls -l /tmp/
 
 script:
   - phpunit --verbose 
-
