@@ -21,7 +21,7 @@
 		<server name="PHPBB_TEST_DBMS" value="firebird" />
 		<server name="PHPBB_TEST_DBNAME" value="/tmp/firebird.fdb" />
 		<server name="PHPBB_TEST_DBPORT" value="" />
-		<server name="PHPBB_TEST_DBHOST" value="localhost;dbname=/tmp/firebird.fdb" />
+		<server name="PHPBB_TEST_DBHOST" value="localhost" />
 		<server name="PHPBB_TEST_DBUSER" value="SYSDBA" />
 		<server name="PHPBB_TEST_DBPASSWD" value="masterkey" />
 		<server name="PHPBB_TEST_TABLE_PREFIX" value="phpbb_" />
