@@ -18,20 +18,8 @@ class dbunit_test extends phpbb_database_test_case
 		$set	= $db->sql_fetchrowset($result);
 		$db->sql_freeresult($result);
 
-		$expected = array(
-			array(
-				"config_name"	=> "bar",
-				"config_value"	=> "42",
-				"is_dynamic"	=> "1",
-			),
-			array(
-				"config_name"	=> "foo",
-				"config_value"	=> "23",
-				"is_dynamic"	=> "0",
-			),
-		);
-
-		$this->assertSame($expected, $set);
+		$this->assertSame("bar", $set[0]['config_name']);
+		$this->assertSame("23", $set[1]['config_value']);
 	}
 
 	public function testInsert()
