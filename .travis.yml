@@ -5,7 +5,7 @@ php:
 env:
   - DB=firebird
 
-before_install:
+after_install:
   - sudo service firebird2.5-super start
 
 before_script:
