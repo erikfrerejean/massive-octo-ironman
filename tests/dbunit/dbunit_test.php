@@ -12,7 +12,8 @@ class dbunit_test extends phpbb_database_test_case
 		$db = $this->new_dbal();
 
 		$sql = 'SELECT *
-			FROM phpbb_config';
+			FROM phpbb_config
+			ORDER BY config_name';
 		$result	= $db->sql_query($sql);
 		$set	= $db->sql_fetchrowset($result);
 		$db->sql_freeresult($result);
@@ -37,13 +38,13 @@ class dbunit_test extends phpbb_database_test_case
 	{
 		$db = $this->new_dbal();
 
-		$sql = 'INSERT INTO phpbb_config (config_name, config_value, is_dynamic)
-			VALUES ("footbar", "barbar", 0)';
+		$sql = "INSERT INTO phpbb_config (config_name, config_value, is_dynamic)
+			VALUES ('footbar', 'barbar', 0)";
 		$db->sql_query($sql);
 
-		$sql2 = 'SELECT *
+		$sql2 = "SELECT *
 			FROM phpbb_config
-			WHERE config_name = "footbar"';
+			WHERE config_name = 'footbar'";
 		$result = $db->sql_query($sql2);
 		$value	= $db->sql_fetchfield('config_value', false, $result);
 		$db->sql_freeresult($result);
